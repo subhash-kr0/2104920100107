@@ -3,11 +3,11 @@
 A simple web application built with Flask to calculate the average of comma-separated numbers.
 
 **Postman Output**
-![Postman Output](AverageCalculator\static\postman.png)
+![Postman Output](AverageCalculator/static/postman.png)
 
 **Web Output**
 
-![Web Image](AverageCalculator\static\web.png)
+![Web Image](AverageCalculator/static/web.png)
 
 
 ## How to Run
