@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Average Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Average Calculator</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.numbers.label }}<br>
+                {{ form.numbers(size=40) }}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <p class="flash {{ category }}">{{ message }}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        {% if average is not none %}
+            <h3>Average: {{ average }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
